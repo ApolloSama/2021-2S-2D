@@ -1,6 +1,28 @@
 USE OPTUS;
 GO
 
+SELECT nomeUsuario, emailUsuario, permissao FROM USUARIO
+WHERE permissao = 1
+GO
+
+SELECT nomeAlbum, dataCriacao FROM ALBUM
+LEFT JOIN ARTISTAALBUM
+ON ALBUM.idAlbum = ARTISTAALBUM.idAlbum
+
+SELECT * FROM USUARIO
+WHERE emailUsuario = 'BBB'
+GO
+
+SELECT nomeAlbum, nomeArtista, nomeEstilo FROM ALBUM
+LEFT JOIN ARTISTA
+ON ALBUM.idArtista = ARTISTA.idArtista
+LEFT JOIN ALBUMESTILO
+ON ALBUM.idAlbum = ALBUMESTILO.idAlbum
+LEFT JOIN ESTILO
+ON ALBUMESTILO.idEstilo = ESTILO.idEstilo
+WHERE disponibilidade = 1
+
+
 SELECT * FROM ALBUM
 SELECT * FROM ESTILO
 SELECT * FROM ARTISTA

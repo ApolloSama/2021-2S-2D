@@ -1,6 +1,24 @@
 USE LOCADORA;
 GO
 
+SELECT nomeCliente, nomeModelo, dataAluguel, dataDevolucao FROM ALUGUEL
+LEFT JOIN CLIENTE
+ON ALUGUEL.idCliente = CLIENTE.idCliente
+LEFT JOIN VEICULO
+ON VEICULO.idVeiculo = ALUGUEL.idVeiculo
+LEFT JOIN MODELO
+ON MODELO.idModelo = VEICULO.idModelo
+GO
+
+SELECT nomeCliente, nomeModelo, dataAluguel, dataDevolucao FROM ALUGUEL
+RIGHT JOIN CLIENTE
+ON ALUGUEL.idCliente = CLIENTE.idCliente
+LEFT JOIN VEICULO
+ON VEICULO.idVeiculo = ALUGUEL.idVeiculo
+LEFT JOIN MODELO
+ON MODELO.idModelo = VEICULO.idModelo
+GO
+
 SELECT * FROM ALUGUEL
 SELECT * FROM CLIENTE
 SELECT * FROM EMPRESA

@@ -28,5 +28,8 @@ VALUES ('Saulo'),('Joao'),('Lucas');
 DELETE FROM CLIENTE
 WHERE nomeCliente = 'Saulo'
 
-INSERT INTO ALUGUEL (idVeiculo, idCliente, dataAluguel)
-VALUES (5,3,'11/09/2000'),(7,5,'11/09/2000'),(6,6,'11/09/2000'),(6,2,'13/09/2000');
+INSERT INTO ALUGUEL (idVeiculo, idCliente, dataAluguel, dataDevolucao)
+VALUES (5,3,'11/09/2000','15/09/2000'),(7,5,'11/09/2000','12/09/2000'),(6,6,'11/09/2000','13/09/2000'),(6,2,'13/09/2000','14/09/2000');
+
+INSERT INTO ALUGUEL (dataDevolucao)
+VALUES ('15/09/2000'),('12/09/2000'),('13/09/2000'),('14/09/2000');
