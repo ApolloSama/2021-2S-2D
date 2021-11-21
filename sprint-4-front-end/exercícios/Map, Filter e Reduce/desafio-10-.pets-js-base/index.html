@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+</head>
+
+<body>
+
+    <script>
+
+        let pets = [{
+                nome: "Cachorro 1",
+                idade: 6,
+                tipoAnimal: "cachorro"
+            },
+            {
+                nome: "Cachorro 2",
+                idade: 7,
+                tipoAnimal: "cachorro"
+            },
+            {
+                nome: "Cachorro 3",
+                idade: 12,
+                tipoAnimal: "cachorro"
+            },
+            {
+                nome: "Gato 1",
+                idade: 14,
+                tipoAnimal: "gato"
+            },
+            {
+                nome: "Gato 2",
+                idade: 4,
+                tipoAnimal: "gato"
+            }]
+
+            // 1.	Liste somente os animais cujo tipo seja igual a gato;
+            console.log("Todos os animais que são gatos:")
+            let gato = pets.filter(pet => {
+                return pet.tipoAnimal === "gato"
+            })  
+
+            console.log(gato)
+
+            // 2.	Liste somente os animais cuja idade seja superior a 7;
+            console.log("Todos animais que tem mais de 7 anos:")
+            let sete = pets.filter(pet => {
+                return pet.idade > 7
+            })
+
+            console.log(sete)
+
+            // 3.	Some a idade de todos os pets;
+            idade = pets.map(pet => {
+                return pet.idade
+            })
+            
+            let somaIdade = idade.reduce((total, idade) => {
+                return total + idade
+            })
+
+            console.log(idade)
+
+            console.log(somaIdade)
+
+            // 4.	Traga somente os nomes dos pets;
+            console.log("O nome dos pets:")
+            let nome = pets.map(pet => {
+                return pet.nome
+            })
+
+            // 5.	Adicione mais um pet chamado doguinho, cuja idade é igual a 13 e o tipo seja cachorro;
+            console.log("Novo dog chamado doguinho ")
+            pets.push({
+                nome: "doguinho",
+                idade: 13,
+                tipoAnimal: "cachorro"
+            })
+
+            // 6. Mostre a quantidade de cachorros que possuem na lista
+            console.log("cachorros na lista:")
+            let quantidade = pets.filter(pet => {
+                return pet.tipoAnimal == "cachorro"
+            }).length
+            console.log(quantidade)
+
+    </script>
+
+</body>
+
+</html>

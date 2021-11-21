@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+</head>
+
+<body>
+
+    <script>
+        let times = [{
+            nome: "Time1",
+            vitorias: 15,
+            empates: 3,
+            derrotas:2,
+            golsproprios:44,
+            golscontra:2
+        }, {
+            nome: "Time2",
+            vitorias: 24,
+            empates: 3,
+            derrotas:15,
+            golsproprios:68,
+            golscontra:1
+        }, {
+            nome: "Time3",
+            vitorias: 20,
+            empates: 2,
+            derrotas: 13,
+            golsproprios:57,
+            golscontra:3
+        }, {
+            nome: "Time4",
+            vitorias: 18,
+            empates: 4,
+            derrotas:3,
+            golsproprios:33,
+            golscontra:4
+        }, {
+            nome: "Time5",
+            vitorias: 17,
+            empates: 7,
+            derrotas:6,
+            golsproprios:58,
+            golscontra:40
+        }]
+
+        // 1.	Lista somente os times cujas vitórias seja maior ou igual que 20
+        console.log("Times com mais de 20 ou a mesma quantidade de vitorias")
+        times20 = times.filter(time => {
+            return time.vitorias >= 20
+        })
+        console.log(timesBons)
+
+        // 2.	Traga somente os nomes dos times;
+        console.log("O nome dos times")
+        let timesNomes = times.map(time => {
+            return time.nome
+        })
+        console.log(timesNomes)
+
+        // 3.	Adicione mais um time chamado Wolves, vitorias 12, empates 8, derrotas 10, gols proprios 38, golscontras 36;
+        console.log("Novo time Wolves")
+        times.push({
+            nome: "Wolves",
+            vitorias: 12,
+            empates: 8,
+            derrotas: 10,
+            golsproprios: 38,
+            golscontra: 36
+        })
+
+        console.log(times.filter(time => {
+            return time.nome === "Wolves"
+        }))
+
+        // 4. Mostre o nome e a quantidade de jogos(vitorias, empates e derrotas), quantidade de vitorias, empates e derrotas de um time
+        console.log("nome e quantidade de jogos (vitorias, empates e derrotas)")
+        let time = times.filter(time => {
+            return time.nome === "Time4"
+        })
+
+
+        // 5.	Informe a quantidade de jogos do campeonato;
+        //
+    </script>
+
+</body>
+
+</html>
